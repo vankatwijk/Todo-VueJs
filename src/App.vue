@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <Header />
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
   </div>
 </template>
 
 <script>
 import Todos from './components/Todos'
+import Header from './components/layout/Header'
 
 export default {
   name: 'app',
   components: {
-    Todos
+    Todos,
+    Header
   },
   data(){
     return{
@@ -53,6 +56,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
